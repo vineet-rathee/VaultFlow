@@ -6,6 +6,6 @@ const controller=require("../controllers/account.controller");
 
 router.post("/create",middleware.verifyToken,middleware.verifyUsername,controller.createAccount);
 
-router.post("/close",middleware.verifyUser,controller.close);
+router.post("/freeze",middleware.verifyUser,controller.close);
 
 module.exports=router;
