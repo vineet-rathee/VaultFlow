@@ -11,6 +11,9 @@ const accountRoute=require("./routes/account.route");
 const transactionRoute=require("./routes/transaction.route");
 const systemRoute=require("./routes/system.route");
 
+app.get("/",(req,res)=>{
+    res.send("server is live and working");
+})
 app.use("/bank/auth",authRoute);
 app.use("/bank/account",accountRoute);
 app.use("/bank/transaction",transactionRoute);
